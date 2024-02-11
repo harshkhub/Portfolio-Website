@@ -20,9 +20,125 @@
             &.sub-logo{
                 width: 130px;
             }
-
-
-
         }
+    }
+
+    nav {
+        display:block;
+        text-align: center;
+        position: absolute;
+        height: 300px;
+        top: 45%;
+        margin-top: -120px;
+        width: 100%;
+
+        a{
+            font-size: 35px;
+            color: #4d4d4d;
+            display:block;
+            line-height: 55px;
+            height: 70px;
+            position: relative;
+            text-decoration: none;
+
+            i{
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover{
+                color: #fdfdfc;
+
+                svg {
+                    opacity: 0;
+                    color: #fdfdfc;
+                }
+
+                &:after{
+                    opacity: 1;
+                }
+            }
+
+            &:after{
+                content: '';
+                font-size: 15px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.1s ease-out;
+            }
+
+            &.active{
+                &:after{
+                    content: 'HOME'
+                }
+                svg{
+                    color:rgb(255, 255, 255);
+                }
+            }
+
+            &.work-page{
+                &:after{
+                    content: 'WORK'
+                }
+                svg{
+                    color:rgb(255, 255, 255);
+                }
+
+            }
+
+            &.about-link{
+                &:after{
+                    content: 'ABOUT ME'
+                }
+                svg{
+                    color:rgb(255, 255, 255);
+                }
+            }
+
+            &.content-page{
+                &:after{
+                    content: 'PROJECTS'
+                }
+                svg{
+                    color:rgb(255, 255, 255);
+                }
+            }
+        }
+
+    }
+
+    ul{
+
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li{
+            a{
+                padding:5px 0;
+                display: block;
+                font-size: 25px;
+                line-height: 15px;
+
+                &:hover svg{
+                    color: #fdfdfc;
+
+                }
+
+
+            }
+        }
+
+
+
     }
 }
