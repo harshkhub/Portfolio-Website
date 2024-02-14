@@ -1,4 +1,5 @@
 import {Link, NavLink} from 'react-router-dom'
+import React, { useEffect } from 'react';
 import './index.scss'
 import Name from '../../assets/images/Name.png'
 import Harsh from '../../assets/images/Harsh.png'
@@ -7,18 +8,17 @@ import { faHome, faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faComputer } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 //adding logo and name below that
 const Sidebar = () => (
+  
   <div className = "nav-bar">
     <Link className = "logo" to='/'> 
         <img src={Name} alt="logo" />
-        <img className = "sub-logo"src={Harsh} alt="harshkhub" />
     </Link>
     <nav>
-      <NavLink exact = "true" activeclassname = "active" to="/">
-        <FontAwesomeIcon icon = {faHome} color = "#4d4d4e" />
-      </NavLink>
+      <NavLink exact = "true" activeclassname = "active" to="/">Home</NavLink>
       <NavLink exact = "true" activeclassname = "active" className = "about-link" to="/about">
         <FontAwesomeIcon icon = {faUser} color = "#4d4d4e" />
       </NavLink>
@@ -49,6 +49,9 @@ const Sidebar = () => (
         </a>
       </li>
     </ul>
+    <div className='hamburger'>
+      <FontAwesomeIcon icon = {faBars} color = "#4d4d4e" />
+    </div>
   </div>
 )
 
