@@ -1,0 +1,113 @@
+.nav-bar {
+    background: black;
+    width:100%;
+    height: 8%;
+    position: fixed;
+    top: 0;
+    min-height:initial;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+    
+
+    .logo {
+        position: absolute; /* Changed to absolute positioning */
+        top: -7px;
+        left: 0;
+        padding: 8px;
+
+        img {
+            display: block;
+            margin: 10px auto;
+            width: 60px;
+            height: auto;
+
+
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Changed to center */
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        font-size: 10px;
+        z-index: 3;
+    }
+    
+    .socialLinks {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Changed to flex-end */
+        list-style: none;
+        font-size: large;
+        z-index: 5;
+
+        &:hover{
+            color: white;
+        }
+    }
+
+    .socialLinks::after{
+        color: white;
+
+    }
+
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .nav a {
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    ul li {
+        margin: 0 10px;
+    }
+    
+    @media screen and (max-width: 1040px) {
+        .nav {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            top: 0;
+            left: -100%;
+            z-index: 3;
+            transition: 0.3s;
+        }
+
+        .nav.active{
+            left: 0;
+        }
+    
+        .nav li {
+            padding: 0rem 0;
+        }
+    
+        .nav li a {
+            padding: 2rem 0;
+        }
+    
+        .hamburger {
+            display: block; /* Shows hamburger icon */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            z-index: 3;
+        }
+
+        ul{
+            display: none;
+        }
+    }
